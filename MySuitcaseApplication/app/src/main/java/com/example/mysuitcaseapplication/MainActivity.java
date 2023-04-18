@@ -114,33 +114,6 @@ public class MainActivity extends AppCompatActivity {
 
     }
 
-//    @IgnoreExtraProperties
-//    public class Suitcase_status {
-//
-//        public List<String> move_data = new ArrayList<>();;
-//        public int light_data;
-//        public String GPS_data;
-//
-//        public Suitcase_status() {
-//            // Default constructor required for calls to DataSnapshot.getValue(User.class)
-//        }
-//
-//        public Suitcase_status(List<String> move_data, int light_data, String GPS_data) {
-//            this.move_data = move_data;
-//            this.light_data = light_data;
-//            this.GPS_data = GPS_data;
-//        }
-//
-//    }
-
-//    public void writeNewUser(DatabaseReference mDatabase, List<String> move_data, int light_data, String GPS_data) {
-//        Suitcase_status suitcase_status = new Suitcase_status(move_data, light_data, GPS_data);
-//
-//        mDatabase.child(String.valueOf(counter)).child(move_data).setValue(move_data);
-//        DatabaseReference myRef1 = myRef.child(String.valueOf(counter));
-//
-//        myRef1.setValue(data);
-//    }
 
 
     void findBT() {
@@ -153,13 +126,6 @@ public class MainActivity extends AppCompatActivity {
             if (ActivityCompat.checkSelfPermission(this, android.Manifest.permission.BLUETOOTH_CONNECT) != PackageManager.PERMISSION_GRANTED) {
                 ActivityCompat.requestPermissions(MainActivity.this, new String[]{android.Manifest.permission.BLUETOOTH_CONNECT}, 2);
 
-                // TODO: Consider calling
-                //    ActivityCompat#requestPermissions
-                // here to request the missing permissions, and then overriding
-                //   public void onRequestPermissionsResult(int requestCode, String[] permissions,
-                //                                          int[] grantResults)
-                // to handle the case where the user grants the permission. See the documentation
-                // for ActivityCompat#requestPermissions for more details.
                 return;
             }
             Intent enableBluetooth = new Intent(BluetoothAdapter.ACTION_REQUEST_ENABLE);
@@ -190,13 +156,6 @@ public class MainActivity extends AppCompatActivity {
         UUID uuid = UUID.fromString("00001101-0000-1000-8000-00805F9B34FB"); //Standard SerialPortService ID
         if (ActivityCompat.checkSelfPermission(this, android.Manifest.permission.BLUETOOTH_CONNECT) != PackageManager.PERMISSION_GRANTED) {
             ActivityCompat.requestPermissions(MainActivity.this, new String[]{android.Manifest.permission.BLUETOOTH_CONNECT}, 2);
-            // TODO: Consider calling
-            //    ActivityCompat#requestPermissions
-            // here to request the missing permissions, and then overriding
-            //   public void onRequestPermissionsResult(int requestCode, String[] permissions,
-            //                                          int[] grantResults)
-            // to handle the case where the user grants the permission. See the documentation
-            // for ActivityCompat#requestPermissions for more details.
             return;
         }
         Log.d("mmDevice", String.valueOf(mmDevice));
@@ -266,11 +225,6 @@ public class MainActivity extends AppCompatActivity {
                                     myRef.child(String.valueOf(counter)).child("light_data").setValue(light_data);
                                     myRef.child(String.valueOf(counter)).child("GPS_data").setValue(GPS_data);
 
-
-//                                    DatabaseReference myRef1 = myRef.child(String.valueOf(counter));
-
-//                                    myRef1.setValue(data);
-
                                     Log.d("TAG", data);
 
 
@@ -311,37 +265,6 @@ public class MainActivity extends AppCompatActivity {
                                             }
 
 
-
-//                                            try {
-//                                                GPS_data_processing(GPS_data);
-//                                            } catch (IOException e) {
-//                                                throw new RuntimeException(e);
-//                                            }
-
-
-//                                            DatabaseReference ref = FirebaseDatabase.getInstance().getReference();
-//                                            DatabaseReference usersRef = ref.child(String.valueOf(counter));
-
-//                                            myRef.addValueEventListener(new ValueEventListener() {
-//                                                @Override
-//                                                public void onDataChange(DataSnapshot dataSnapshot) {
-////                                                    System.out.println("hi");
-//
-//                                                    for(DataSnapshot ds : dataSnapshot.getChildren()) {
-//                                                        String userId = (String) String.valueOf(ds.getValue());
-//                                                        list.add(userId);
-////                                                        Log.d("TAG", userId);
-//                                                    }
-////                                                    Log.d("LIST", String.valueOf(list));
-//
-////                                                    copy.addAll(list);
-////                                                    Log.d("COPY", String.valueOf(copy));
-////                                                    deal_with_data(list);
-//                                                    list.clear();
-//                                                }
-//                                                @Override
-//                                                public void onCancelled(DatabaseError databaseError) {}
-//                                            });
                                         }
                                     });
                                 }
@@ -364,25 +287,5 @@ public class MainActivity extends AppCompatActivity {
 
 
 
-//    public static void GPS_data_processing(String macAddress) throws IOException {
-////        String macAddress = "40:91:51:99:F5:19"; // Replace with your MAC address
-//
-//        String url = "https://maps.googleapis.com/maps/api/browserlocation/json?browser=firefox&sensor=true";
-//        url += "&wifi=mac:" + macAddress + "|ssid:|ss:" + -60; // Replace -60 with the signal strength of the Wi-Fi signal, in dBm
-//
-//        HttpURLConnection connection = (HttpURLConnection) new URL(url).openConnection();
-//        connection.setRequestMethod("POST");
-//        connection.setRequestProperty("Content-Type", "application/x-www-form-urlencoded");
-//
-//        BufferedReader reader = new BufferedReader(new InputStreamReader(connection.getInputStream()));
-//        String line;
-//        StringBuilder response = new StringBuilder();
-//        while ((line = reader.readLine()) != null) {
-//            response.append(line);
-//        }
-//        reader.close();
-//
-//        System.out.println(response);
-//    }
 
 }
