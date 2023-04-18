@@ -1,0 +1,14 @@
+<resources>
+    <string name="app_name">MySuitcaseApplication</string>
+    <string name="condition">Device not Connected</string>
+    <string name="title">Suitcase Info</string>
+    <string name="damage_title">Risk of Damage</string>
+    <string name="open_title">Times of Open</string>
+    <string name="damage_desc">To detect if your suitcase is threw by others heavily.</string>
+    <string name="suitcase_image">suitcaseImage</string>
+    <string name="damage_status">0</string>
+    <string name="open_status">0</string>
+    <string name="open_desc">To detect if your suitcase is threw by others heavily.</string>
+    <string name="suitcase_info_title">No damage</string>
+    <string name="damage_time"> </string>
+</resources>

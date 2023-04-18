@@ -1,0 +1,39 @@
+{
+  "project_info": {
+    "project_number": "962115427146",
+    "project_id": "mysuitcaseapplication",
+    "storage_bucket": "mysuitcaseapplication.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:962115427146:android:c527941a4d3f4ed8163fb3",
+        "android_client_info": {
+          "package_name": "com.example.mysuitcaseapplication"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "962115427146-8fdrvfjd1r2ge3fft3cp0kqh3b0codm4.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCSeqXlmPmFuLrARGcUOovRa4tT2UjvdCw"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "962115427146-8fdrvfjd1r2ge3fft3cp0kqh3b0codm4.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
