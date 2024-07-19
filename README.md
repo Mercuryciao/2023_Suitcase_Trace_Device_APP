@@ -34,5 +34,5 @@ BAGO is a device designed to provide travelers with peace of mind by allowing th
 - **Data Processing Pipeline**: Use a complementary filter for the IMU to remove accelerometer spikes and ensure more consistent and accurate data.
 
 ## APP UI
-<img src="suitcase_image.png" width="270" height="600"> <img src="suitcase_image2.png" width="270" height="600">
+<img src="suitcase_image.png" width="330" height="600"> <img src="suitcase_image2.png" width="330" height="600">
 
